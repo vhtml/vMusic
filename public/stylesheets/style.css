@@ -39,3 +39,12 @@ header h1{
 	bottom:10px;
 	border:1px solid #fff;
 }
+.left li{
+	padding:0 10px;
+	text-align: left;
+	line-height: 30px;
+	cursor: pointer;
+}
+.left li.selected{
+	color:#0C0;
+}
