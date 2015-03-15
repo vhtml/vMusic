@@ -18,7 +18,6 @@ header{
 	top:10px;
 	right: 10px;
 	height: 150px;
-	border:1px solid #fff;
 }
 header h1{
 	font-size: 40px;
@@ -29,22 +28,84 @@ header h1{
 	left: 10px;
 	top:170px;
 	bottom:10px;
-	width:200px;
+	width:15%;
 	border:1px solid #fff;
+	overflow: auto;
 }
 .right{
-	left: 220px;
+	left: -webkit-calc(15% + 20px);
+	left: calc(15% + 20px);
 	right: 10px;
 	top:170px;
 	bottom:10px;
-	border:1px solid #fff;
 }
 .left li{
 	padding:0 10px;
 	text-align: left;
 	line-height: 30px;
 	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
 }
 .left li.selected{
 	color:#0C0;
+}
+
+.type{
+	width:200px;
+	margin:10px auto;
+	border:1px solid #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.type li{
+	float: left;
+	height:26px;
+	line-height: 26px;
+	width:50%;
+	list-style: none;
+	cursor: pointer;
+}
+.type li.selected{
+	background: #fff;
+	color:#555;
+}
+
+input[type="range"]{
+	-webkit-appearance:none;
+	height: 8px;
+	background-color: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	height: 12px;
+	width: 12px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 800px),screen and (max-height: 500px){
+	header{
+		height: 80px;
+	}
+	header h1{
+		font-size: 24px;
+		height: 35px;
+		line-height: 35px;
+	}
+	.type{
+		width:120px;
+		margin:5px auto;
+	}
+	.type li{
+		height:16px;
+		line-height: 16px;
+		width:50%;
+	}
+	.left,.right{
+	top:100px;
+	}
 }
